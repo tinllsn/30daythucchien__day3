@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #e26e70;
+}
+
+body {
+    height: 100vh;
+    font-family: "Poppins";
+    background-image: linear-gradient(45deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 50%, rgb(255, 204, 112)100%);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Open__modal__btn {
+    background-color: #fff;
+    border-radius: 16px;
+    width: 110px;
+    height: 50px;
+    text-align: center;
+    padding: 11px 0;
+}
+
+.Open__modal__btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.modal {
+    width: 100%;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    height: 100vh;
+    position: fixed;
+}
+
+.modal__inner {
+    position: relative;
+    background-color: white;
+    /* top: 34%; */
+    left: 50%;
+    width: 380px;
+    transform: translateX(-50%);
+    /* animation: showModal 0.2s linear forwards; */
+    animation: showModal 0.2s linear 0s 1 normal forwards;
+}
+
+.modal__title {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 12px;
+    font-size: 25px;
+    background-color: var(--primary-color);
+    margin: 5px 0;
+    color: white;
+}
+
+.modal__body {
+    padding: 0 12px;
+
+}
+
+.modal__body h2 {
+    color: var(--primary-color);
+    font-size: 25px;
+    margin: 3px 0 -8px 0;
+}
+
+
+.modal__body p {
+    margin-bottom: 44px;
+}
+
+/* .test {
+    background-color: #fff;
+} */
+
+.modal__body span {
+    background-color: #e26e70;
+    display: block;
+    width: 80px;
+    height: 32px;
+    text-align: center;
+    position: relative;
+    display: block;
+    padding: 5px 0;
+    border-radius: 3px;
+    top: -10px;
+    left: 278px;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal__title__icon:hover,
+.modal__close__btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+@keyframes showModal {
+    from {
+        top: -25%
+    }
+
+    to {
+        top: 34%
+    }
+}
